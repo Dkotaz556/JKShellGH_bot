@@ -201,7 +201,6 @@ RUN echo "bWt2bWVyZ2UgLW8gJzFtaW4ubWt2JyAqbWt2IC0tc3BsaXQgcGFydHM6MDA6MDA6MDAtMD
 # Copies config(if it exists)
 COPY . .
 
-RUN apt-get install -y nodejs
 RUN npm install
 CMD node server
 # setup workdir
