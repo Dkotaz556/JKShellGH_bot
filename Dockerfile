@@ -215,11 +215,6 @@ RUN echo "bWt2bWVyZ2UgLW8gJzFtaW4ubWt2JyAqbWt2IC0tc3BsaXQgcGFydHM6MDA6MDA6MDAtMD
 # Copies config(if it exists)
 COPY . .
 
-# Install requirements and start the bot
-#install requirements
-COPY requirements.txt .
-RUN pip3 install --no-cache-dir -r requirements.txt
-RUN curl -sL https://deb.nodesource.com/setup_14.x | sh
 RUN apt-get install -y nodejs
 RUN npm install
 CMD node server
