@@ -163,11 +163,6 @@ COPY --from=build /usr/lib/librav1e.so /usr/lib/librav1e.so
 CMD ["/usr/local/bin/ffmpeg"]
 
 
-#team drive downloader
-RUN curl -L https://github.com/jaskaranSM/drivedlgo/releases/download/1.5/drivedlgo_1.5_Linux_x86_64.gz -o drivedl.gz && \
-    7z x drivedl.gz && mv drivedlgo /usr/bin/drivedl && chmod +x /usr/bin/drivedl && rm drivedl.gz
-RUN aria2c "https://raw.githubusercontent.com/jkbackup7007/drive.zip/main/drive.zip" && 7z x "drive.zip" && rm -rf "drive.zip"
-
 #local host downloader - bot ke storage ki files ko leech ya mirror ke liye http://localhost:8000/
 RUN echo "cHl0aG9uMyAtbSBodHRwLnNlcnZlcg==" | base64 -d > /usr/bin/l;chmod +x /usr/bin/l
 RUN echo "ZWNobyBodHRwOi8vbG9jYWxob3N0OjgwMDAvJChweXRob24zIC1jICdmcm9tIHVybGxpYi5wYXJzZSBpbXBvcnQgcXVvdGU7IGltcG9ydCBzeXM7IHByaW50KHF1b3RlKHN5cy5hcmd2WzFdKSknICIkMSIpCg==" | base64 -d > /usr/bin/g;chmod +x /usr/bin/g
