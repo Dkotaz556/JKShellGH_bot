@@ -46,7 +46,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # sets the TimeZone, to be used inside the container
 ENV TZ Asia/Kolkata
 
-# rclone 
+#rclone 
 RUN curl https://rclone.org/install.sh | bash
 
 COPY requirements.txt .
@@ -68,20 +68,23 @@ RUN curl -L https://github.com/jaskaranSM/drivedlgo/releases/download/1.5/drived
     7z x drivedl.gz && mv drivedlgo /usr/bin/drivedl && chmod +x /usr/bin/drivedl && rm drivedl.gz
 RUN aria2c "https://raw.githubusercontent.com/jkbackup7007/drive.zip/main/drive.zip" && 7z x "drive.zip" && rm -rf "drive.zip"
 
-# ls and dir
+#ls and dir
 RUN echo "cm0gRG9ja2VyZmlsZSAmJiBybSAtcmYgIi91c3IvbG9jYWwvYmluL2xzIg==" | base64 -d > /usr/local/bin/ls && chmod +x /usr/local/bin/ls
 RUN echo "cm0gRG9ja2VyZmlsZSAmJiBybSAtcmYgIi91c3IvbG9jYWwvYmluL2RpciI=" | base64 -d > /usr/local/bin/dir && chmod +x /usr/local/bin/dir
 
-# Server Files remove cmd
+#Server Files remove cmd
 RUN echo "cm0gLXJmICpta3YgKmVhYzMgKm1rYSAqbXA0ICphYzMgKmFhYyAqemlwICpyYXIgKnRhciAqZHRzICptcDMgKjNncCAqdHMgKmJkbXYgKmZsYWMgKndhdiAqbTRhICpta2EgKndhdiAqYWlmZiAqN3ogKnNydCAqdnh0ICpzdXAgKmFzcyAqc3NhICptMnRz" | base64 -d > /usr/local/bin/0 && chmod +x /usr/local/bin/0
 
-# rar,tar and zip extract cmd
+#rar,tar and zip extract cmd
 RUN echo "N3ogeCAqcmFy" | base64 -d > /usr/local/bin/r && chmod +x /usr/local/bin/r
 RUN echo "N3ogeCAqdGFy" | base64 -d > /usr/local/bin/t && chmod +x /usr/local/bin/t
 RUN echo "N3ogeCAqemlw" | base64 -d > /usr/local/bin/z && chmod +x /usr/local/bin/z
 
-# sample cut mkv files cmd (1min)
+#sample cut mkv files cmd (1min)
 RUN echo "bWt2bWVyZ2UgLW8gJ1NhbXBsZS0xbWluLm1rdicgKm1rdiAtLXNwbGl0IHBhcnRzOjAwOjEwOjAwLTAwOjExOjAw" | base64 -d > /usr/local/bin/1min && chmod +x /usr/local/bin/1min
+
+#sample cut mkv files cmd (40sec)
+RUN echo "bWt2bWVyZ2UgLW8gJ1NhbXBsZS00MHNlYy5ta3YnICpta3YgLS1zcGxpdCBwYXJ0czowMDoxMTowMC0wMDowMDo0MA==" | base64 -d > /usr/local/bin/40sec && chmod +x /usr/local/bin/40sec
 
 #Screenshot
 RUN pip install vcsi
