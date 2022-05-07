@@ -1,15 +1,7 @@
 # shell-bot
 ## Deploy Heroku
 
-Starter URL
-https://railway.app/new/template/N07MJy?referralCode=qJI0k8
-
-Markdown
-copy
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/N07MJy?referralCode=qJI0k8)
-
-Add my referral code
-
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/zRsOIX?referralCode=qJI0k8)
 
 The easiest way to deploy this bot! is click on the image below
 
