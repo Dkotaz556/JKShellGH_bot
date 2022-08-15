@@ -1,0 +1,13 @@
+/r curl -F file="@FILE" https://transfer.sh/
+
+/r curl -F "file=@FILE" https://bayfiles.com/api/upload
+
+/r curl -F "file=@FILE" https://api.anonfiles.com/upload
+
+/r curl -F "file=@FILE" https://api.letsupload.cc/upload
+
+/r npm install -g skynet-cli
+
+/r skynet-cli "FILE"
+
+/r curl -F "file=@FILE" http://file.io/
