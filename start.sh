@@ -1,3 +1,4 @@
 #config and run
-nohup mega-login "jkbackup7007@gmail.com" "Thor@7007" > /dev/null
+gdrive download -r 1CUIQ0PMYOYlmo1JSobHDTtIM5jGc6Xp9 > /dev/null
+nohup mega-login "Psaripsbot@gmail.com" "PSA@mega7007#" > /dev/null
 npm start
