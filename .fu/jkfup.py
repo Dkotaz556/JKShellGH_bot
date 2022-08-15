@@ -26,7 +26,7 @@ def get_gdrive_service():
  
 service = get_gdrive_service() 
  
-folder_id = '1eiAIhQRnfnWl2cz7bFf3isWPjnrKYMuz' 
+folder_id = '12DWeSKNpDBFJdTweaLbGoP0y7IqGU5C2' 
 file_name = f"{file}" 
 file_path = f'/usr/src/app/{file_name}' 
  
