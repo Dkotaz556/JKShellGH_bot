@@ -33,11 +33,6 @@ RUN apt-get update && apt-get install -y software-properties-common && \
     # clean up the container "layer", after we are done
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
-RUN wget https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz && \
-    tar xvf ffmpeg*.xz && \
-    cd ffmpeg-*-static && \
-    mv "${PWD}/ffmpeg" "${PWD}/ffprobe" /usr/local/bin/
-
 ENV LANG C.UTF-8
 
 # we don't have an interactive xTerm
