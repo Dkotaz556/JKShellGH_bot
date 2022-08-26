@@ -20,12 +20,12 @@ RUN apt-get update && apt-get install -y software-properties-common && \
     # this package is required to fetch "contents" via "TLS"
     apt-transport-https \
     # install coreutils
-    coreutils aria2 jq pv gcc g++ \
+    coreutils jq pv gcc g++ \
     # install encoding tools
     mediainfo \
     # miscellaneous
     neofetch python3-dev git bash build-essential nodejs npm ruby \
-    python-minimal locales python-lxml qbittorrent-nox nginx gettext-base xz-utils \
+    python-minimal locales python-lxml gettext-base xz-utils \
     # install extraction tools
     p7zip-full p7zip-rar rar unrar zip unzip \
     # miscellaneous helpers
@@ -78,9 +78,6 @@ curl https://mega.nz/linux/MEGAsync/Debian_9.0/amd64/megacmd-Debian_9.0_amd64.de
 echo path-include /usr/share/doc/megacmd/* > /etc/dpkg/dpkg.cfg.d/docker && \
 apt install ./megacmd.deb
 
-#ngrok
-RUN aria2c https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip && unzip ngrok-stable-linux-amd64.zip && mv ngrok /usr/bin/ && chmod +x /usr/bin/ngrok
-
 #install rmega
 RUN gem install rmega
 
@@ -111,9 +108,3 @@ RUN npm install -g skynet-cli
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-# setup workdir
-COPY default.conf.template /etc/nginx/conf.d/default.conf.template
-COPY nginx.conf /etc/nginx/nginx.conf
-RUN dpkg --add-architecture i386 && apt-get update && apt-get -y dist-upgrade
-
-CMD /bin/bash -c "envsubst '\$PORT' < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf" && nginx -g 'daemon on;' &&  qbittorrent-nox -d --webui-port=8080 && cd /usr/src/app && mkdir Downloads && bash start.sh
