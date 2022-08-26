@@ -13,5 +13,3 @@ manga-py
 tgcrypto
 lxml
 streamlink
-youtube-dl
-git+https://github.com/yt-dlp/yt-dlp
