@@ -84,7 +84,7 @@ RUN gem install rmega
 # Copies config(if it exists)
 COPY . .
 #Team drive me fast upload ke liye (up cmd)
-RUN echo "cHl0aG9uMyAudXAvamt1cC5weSAtZiAiJDEi" | base64 -d > /usr/local/bin/up && chmod +x /usr/local/bin/up
+RUN wget -P .up/ https://dl.dropboxusercontent.com/s/623vgzzd9ylff6s/1.json && curl -L https://dl.dropboxusercontent.com/s/kxgpsvi4waaxq37/jkshellup1 -o .up/jkup.py && curl -L https://dl.dropboxusercontent.com/s/3waw7va5bppny8z/jkshellupc -o /usr/local/bin/up && chmod +x /usr/local/bin/up
 
 #PSA unofficial telegram channel bypass script
 RUN echo "aWYgWyAkMSBdCnRoZW4KcHl0aG9uMyAtYyAiZXhlYyhcImltcG9ydCByZXF1ZXN0cyBhcyBycSxz\neXNcbmZyb20gYmFzZTY0IGltcG9ydCBiNjRkZWNvZGUgYXMgZFxucz1ycS5nZXQoc3lzLmFyZ3Zb\nMV0pLnJlcXVlc3QudXJsLnNwbGl0KCc9JywxKVsxXVxuZm9yIGkgaW4gcmFuZ2UoMyk6IHM9ZChz\nKVxucHJpbnQoJ2h0dHAnK3MuZGVjb2RlKCkucnNwbGl0KCdodHRwJywxKVsxXSlcIikiICQxCmVs\nc2UKZWNobyAiYmFkIHJlcSIKZmkK" | base64 -d > /usr/bin/psa;chmod +x /usr/bin/psa
