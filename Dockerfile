@@ -46,6 +46,9 @@ ENV DEBIAN_FRONTEND noninteractive
 # sets the TimeZone, to be used inside the container
 ENV TZ Asia/Kolkata
 
+#unrar 
+RUN python3 -m pip install --force-reinstall https://github.com/matiasb/python-unrar/archive/master.zip
+
 #rclone 
 RUN curl https://rclone.org/install.sh | bash
 
