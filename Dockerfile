@@ -46,9 +46,6 @@ ENV DEBIAN_FRONTEND noninteractive
 # sets the TimeZone, to be used inside the container
 ENV TZ Asia/Kolkata
 
-#unrar 
-RUN python3 -m pip install --force-reinstall https://github.com/matiasb/python-unrar/archive/master.zip
-
 #rclone 
 RUN curl https://rclone.org/install.sh | bash
 
@@ -66,6 +63,10 @@ RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
 RUN go get github.com/Jitendra7007/gdrive
 RUN echo "KGdkcml2ZSB1cGxvYWQgIiQxIikgMj4gL2Rldi9udWxsIHwgZ3JlcCAtb1AgJyg/PD1VcGxvYWRlZC4pW2EtekEtWl8wLTktXSsnID4gZztnZHJpdmUgc2hhcmUgJChjYXQgZykgPi9kZXYvbnVsbCAyPiYxO2VjaG8gImh0dHBzOi8vZHJpdmUuZ29vZ2xlLmNvbS9maWxlL2QvJChjYXQgZykiCg==" | base64 -d > /usr/local/bin/gup && \
 chmod +x /usr/local/bin/gup
+
+#drive downloader
+RUN curl -L https://github.com/jaskaranSM/drivedlgo/releases/download/1.5/drivedlgo_1.5_Linux_x86_64.gz -o drivedl.gz && \
+    7z x drivedl.gz && mv drivedlgo /usr/bin/drivedl && chmod +x /usr/bin/drivedl && rm drivedl.gz && wget "https://raw.githubusercontent.com/jitendra1650/drive.zip/main/drive.zip" && 7z x "drive.zip" && rm drive.zip && drivedl set Config.json
 
 #Screenshot
 RUN pip install vcsi
