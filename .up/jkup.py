@@ -16,7 +16,7 @@ def get_gdrive_service():
  creds = None 
  SCOPES = ['https://www.googleapis.com/auth/drive'] 
  try: 
-  creds = service_account.Credentials.from_service_account_file('.up/1.json') 
+  creds = service_account.Credentials.from_service_account_file('/usr/src/app/.up/1.json') 
  except Exception: 
   if os.path.exists('token.pickle'): 
    with open('token.pickle', 'rb') as token: 
@@ -29,7 +29,7 @@ service = get_gdrive_service()
  
 folder_id = '13CQ3XI3HI-bAvbguc68iA1IsuXbZjD1g' 
 file_name = f"{file}" 
-file_path = f'/usr/src/app/{file_name}' 
+file_path = f'/root/{file_name}' 
  
 def get_mime_type(file_path): 
  mime = magic.Magic(mime=True) 
@@ -51,4 +51,4 @@ file = service.files().create(supportsTeamDrives=True,
          body=file_metadata, 
          media_body=media, 
          fields='id').execute() 
-print ('https://drive.google.com/file/d/%s' % file.get('id'))
+print ('https://drive.google.com/open?id=%s' % file.get('id'))
