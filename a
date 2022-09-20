@@ -1,2 +1,0 @@
-aria2c -s 16 -x 16 "$1" > /dev/null
-python3 -c "exec(\"import re,sys\nfrom urllib.parse import unquote_plus\nprint ('%s' % unquote_plus(sys.argv[1]).rsplit('/', 1)[-1])\")" "$1"
