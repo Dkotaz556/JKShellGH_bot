@@ -1,0 +1,10 @@
+#!/bin/bash
+if
+[ "$1" == '' ]; then
+echo "Send a GDrive or Index Link With Command" 
+elif
+[[ "$1" =~ "drive.google.com" ]]; then
+gdown --fuzzy "$1" 2>&1 | sed 's+To: /root/++g;1,2d;4,$d'
+else
+aria2c -x 10 "$1"|sed -n '/Download complete:/p'|sed 's+/root/+\n+g'|sed -n '2p'
+fi
