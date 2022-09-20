@@ -1,8 +1,0 @@
-{
-  "name": "heroku-shell",
-  "description": "shell Docker",
-  "repository": "https://github.com/Jitendra7007/heroku-shell",
-  "logo": "https://images.discordapp.net/avatars/282859044593598464/156a0d2872579f1ffcaa5d2127239bfd.png?size=512",
-  "keywords": ["heroku", "docker", "shell"],
-  "stack": "container"
-}
