@@ -13,3 +13,6 @@ manga-py
 tgcrypto
 lxml
 streamlink
+yt-dlp
+gdown
+vcsi
