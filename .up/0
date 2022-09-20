@@ -1,0 +1,2 @@
+rm -rf *mkv *eac3 *mka *mp4 *ac3 *aac *zip *rar *tar *7z *dts *mp3 *3gp *ts *bdmv *flac *wav *m4a *mka *wav *aiff *srt *vxt *sup *ass *ssa *m2ts *avi *webm *wmv *wma *jpg *jpeg *png
+echo "All Server Files Deleted."
